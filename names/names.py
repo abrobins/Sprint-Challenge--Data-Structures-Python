@@ -18,7 +18,7 @@ duplicates = []  # Return the list of duplicates in this data structure
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
 
-binary_tree = BSTNode(names_2[0])
+binary_tree = BSTNode('names')
 for name in names_2:
     binary_tree.insert(name)
 
