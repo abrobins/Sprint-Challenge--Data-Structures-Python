@@ -53,3 +53,21 @@ class LinkedList:
             node = temp_next
         # finally set head to previous node
         self.head = prev
+
+        # Another solution
+
+        # You must use recursion for this solution
+        # if node == None:  # empty list
+        #    return None
+        # Base case
+        # when we reach end of list, set this node to head
+        # if node.get_next() == None:
+        #    self.head = node
+        #    return
+        # else:
+        # Call until end of list
+        #    self.reverse_list(node.get_next())
+        # now we need to change arrows
+        #    node.get_next().set_next(node)
+        # set old heads next to None
+        #    node.set_next(None)

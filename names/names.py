@@ -11,6 +11,9 @@ names_2 = f.read().split("\n")  # List containing 10000 names
 f.close()
 
 duplicates = []  # Return the list of duplicates in this data structure
+# Return the list of duplicates in this data structure
+# Using a set you could do the following to create the same result
+# duplicates = set(names_1) & set(names_2)
 
 # Replace the nested for loops below with your improvements
 # for name_1 in names_1:
@@ -34,3 +37,5 @@ print(f"runtime: {end_time - start_time} seconds")
 # Python has built-in tools that allow for a very efficient approach to this problem
 # What's the best time you can accomplish?  Thare are no restrictions on techniques or data
 # structures, but you may not import any additional libraries that you did not write yourself.
+
+# Using set would be a very efficient way to handle this problem - see code above
