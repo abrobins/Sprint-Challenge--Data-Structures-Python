@@ -12,6 +12,7 @@ class Node:
     def set_next(self, new_next):
         self.next_node = new_next
 
+
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -39,4 +40,34 @@ class LinkedList:
         return False
 
     def reverse_list(self, node, prev):
-        pass
+        prev = None
+        node = self.head
+        while node:
+            # get next node in temp variable
+            temp_next = node.next_node
+            # set next node of current to previous
+            node.next_node = prev
+            # set previous to current node
+            prev = node
+            # set current node to next
+            node = temp_next
+        # finally set head to previous node
+        self.head = prev
+
+        # Another solution
+
+        # You must use recursion for this solution
+        # if node == None:  # empty list
+        #    return None
+        # Base case
+        # when we reach end of list, set this node to head
+        # if node.get_next() == None:
+        #    self.head = node
+        #    return
+        # else:
+        # Call until end of list
+        #    self.reverse_list(node.get_next())
+        # now we need to change arrows
+        #    node.get_next().set_next(node)
+        # set old heads next to None
+        #    node.set_next(None)
